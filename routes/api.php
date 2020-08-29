@@ -12,7 +12,12 @@ Route::prefix('users')->group(function () {
     Route::get('get_users','UsersController@getUsers');
 });
 
+Route::prefix('comments')->group(function () {
+    Route::get('get_comments','commentsController@getcomments');
+});
+
 Route::prefix('posts')->group(function () {
     Route::get('get_posts','PostsController@getPosts');
     Route::post('insert_posts','PostsController@insertPost');
 });
+
