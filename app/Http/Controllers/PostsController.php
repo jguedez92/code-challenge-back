@@ -25,6 +25,7 @@ class PostsController extends Controller
             $post = $request->validate([
                 'title' => 'required|string|max:40',
                 'body' => 'required|string',
+                'email' => 'required|string',
                 'userId' => 'required|numeric',
             ]);
             $request = Http::withHeaders([
